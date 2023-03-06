@@ -1,4 +1,4 @@
-"""ds-e2e
+"""recsys
 """
 
 __version__ = "0.1"

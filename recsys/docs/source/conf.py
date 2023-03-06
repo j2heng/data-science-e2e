@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-# ds_e2e documentation build
+# recsys documentation build
 # configuration file, created by sphinx-quickstart.
 #
 # This file is execfile()d with the current directory set to its
@@ -21,11 +21,11 @@ import re
 
 from kedro.framework.cli.utils import find_stylesheets
 
-from ds_e2e import __version__ as release
+from recsys import __version__ as release
 
 # -- Project information -----------------------------------------------------
 
-project = "ds_e2e"
+project = "recsys"
 author = "Kedro"
 
 # The short X.Y version.
@@ -119,7 +119,7 @@ html_show_sourcelink = False
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "ds_e2edoc"
+htmlhelp_basename = "recsysdoc"
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -147,8 +147,8 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "ds_e2e.tex",
-        "ds_e2e Documentation",
+        "recsys.tex",
+        "recsys Documentation",
         "Kedro",
         "manual",
     )
@@ -161,8 +161,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        "ds_e2e",
-        "ds_e2e Documentation",
+        "recsys",
+        "recsys Documentation",
         [author],
         1,
     )
@@ -176,11 +176,11 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        "ds_e2e",
-        "ds_e2e Documentation",
+        "recsys",
+        "recsys Documentation",
         author,
-        "ds_e2e",
-        "Project ds_e2e codebase.",
+        "recsys",
+        "Project recsys codebase.",
         "Data-Science",
     )
 ]

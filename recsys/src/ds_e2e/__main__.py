@@ -1,5 +1,5 @@
-"""ds-e2e file for ensuring the package is executable
-as `ds-e2e` and `python -m ds_e2e`
+"""recsys file for ensuring the package is executable
+as `recsys` and `python -m recsys`
 """
 import importlib
 from pathlib import Path

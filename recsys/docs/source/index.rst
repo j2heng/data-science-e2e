@@ -1,8 +1,8 @@
-.. ds_e2e documentation master file, created by sphinx-quickstart.
+.. recsys documentation master file, created by sphinx-quickstart.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to project ds_e2e's API docs!
+Welcome to project recsys's API docs!
 =============================================
 
 .. toctree::

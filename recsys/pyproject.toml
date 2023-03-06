@@ -1,6 +1,6 @@
 [tool.kedro]
-package_name = "ds_e2e"
-project_name = "ds-e2e"
+package_name = "recsys"
+project_name = "recsys"
 kedro_init_version = "0.18.5"
 
 [tool.isort]
@@ -9,7 +9,7 @@ profile = "black"
 [tool.pytest.ini_options]
 addopts = """
 --cov-report term-missing \
---cov src/ds_e2e -ra"""
+--cov src/recsys -ra"""
 
 [tool.coverage.report]
 fail_under = 0

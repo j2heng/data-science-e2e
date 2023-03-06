@@ -40,7 +40,7 @@ loggers:
   kedro:
     level: INFO
 
-  ds_e2e:
+  recsys:
     level: INFO
 
 root:
