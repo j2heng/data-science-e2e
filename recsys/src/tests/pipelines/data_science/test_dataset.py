@@ -4,17 +4,19 @@ import torch
 from torch.utils.data import DataLoader
 from recsys.pipelines.data_science.torch_dataset import MovieDataset
 
+
 def generate_sample_data_frame(num_samples):
-
     # Create a sample dataframe with random data
-    data = pd.DataFrame({'userId': np.random.randint(1, 11, num_samples),
-                        'movieId': np.random.randint(1, 21, num_samples),
-                        'rating': np.random.randint(1, 6, num_samples),
-                        'Action': np.random.randint(0, 1, num_samples),
-                        'Comedy': np.random.randint(0, 1, num_samples),
-    })
+    data = pd.DataFrame(
+        {
+            "userId": np.random.randint(1, 11, num_samples),
+            "movieId": np.random.randint(1, 21, num_samples),
+            "rating": np.random.randint(1, 6, num_samples),
+            "Action": np.random.randint(0, 1, num_samples),
+            "Comedy": np.random.randint(0, 1, num_samples),
+        }
+    )
     return data
-
 
 
 class TestWrapper:
@@ -35,6 +37,5 @@ class TestWrapper:
 
             assert user_input.shape == (5,)
             assert movie_input.shape == (5,)
-            assert genres_input.shape ==(5, 2)
+            assert genres_input.shape == (5, 2)
             assert ratings.shape == (5,)
-            

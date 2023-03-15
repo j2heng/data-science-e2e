@@ -19,6 +19,10 @@ raw_ratings:
   type: pandas.CSVDataSet
   filepath: data/01_raw/ratings.csv
 
+ids_mapping:
+  type: pickle.PickleDataSet
+  filepath: data/02_intermediate/ids_mapping.pkl
+  backend: pickle  
 
 train_df:
   type: pandas.ParquetDataSet
