@@ -31,3 +31,8 @@ train_df:
 test_df:
   type: pandas.ParquetDataSet
   filepath: data/02_intermediate/test.pq
+
+experiment_data_cf:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/experiment_data_cf.pkl
+  backend: pickle  

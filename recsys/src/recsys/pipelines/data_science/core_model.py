@@ -7,9 +7,9 @@ class CollaborativeFiltering(nn.Module):
         super().__init__()
         self.user_emb = nn.Embedding(n_users, emb_size)
         self.item_emb = nn.Embedding(n_movies, emb_size)
-        self.fc1 = nn.Linear(emb_size * 2, 256)
-        self.fc2 = nn.Linear(256, 64)
-        self.fc3 = nn.Linear(64, 1)
+        self.fc1 = nn.Linear(emb_size * 2, 256, bias=True)
+        self.fc2 = nn.Linear(256, 64, bias=True)
+        self.fc3 = nn.Linear(64, 1, bias=True)
 
     def forward(self, user_ids, item_ids, minmax=None):
         user_embedding = self.user_emb(user_ids)
