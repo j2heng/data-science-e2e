@@ -1,9 +1,10 @@
-from typing import List
-import pandas as pd
-import numpy as np
-from sklearn.preprocessing import MultiLabelBinarizer
-from sklearn.model_selection import train_test_split
 import logging
+from typing import List
+
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MultiLabelBinarizer
 
 DEFAULT_TEST_SIZE = 0.25
 
@@ -61,7 +62,7 @@ def get_train_test_data(
         movies = movies[selected_cols]
 
         logging.info(
-            f"Genres={list(set(movie_cols).difference(supported_cols))} are not supported."
+            f"Genres={list(set(movie_cols).difference(supported_cols))} are not supported."  # noqa:E501
         )
 
     merged_df = pd.merge(ratings, movies, on="movieId")

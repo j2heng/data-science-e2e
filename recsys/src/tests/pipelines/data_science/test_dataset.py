@@ -1,7 +1,8 @@
-import pandas as pd
 import numpy as np
+import pandas as pd
 import torch
 from torch.utils.data import DataLoader
+
 from recsys.pipelines.data_science.torch_dataset import MovieDataset
 
 
