@@ -1,5 +1,38 @@
 # recsys
 
+
+## Using MLflow with a Docker Environment
+
+MLflow supports distributed architectures, where the tracking server, backend store, and artifact store reside on remote hosts.
+In this project, we spin up a Postgres database inside the container, and use it for MLfLow backend entity storage. As for artifacts, we simply save them to the local folder `./artifacts`. 
+For other settings, see https://mlflow.org/docs/latest/tracking.html
+
+
+### Install Docker engine
+See official docker documentation: https://docs.docker.com/get-docker/
+
+### Setup postgresql server
+
+A bash file `run-docker.sh` is created to help with the installation of mlflow and postgresql servers. 
+```
+./run-docker.sh postgresql-build
+./run-docker.sh postgresql-up
+```
+The postgresql server will be automatically forwarded to your localhost port 5432. 
+
+In case of `Permission denied`, run the following line to change the permission. 
+```
+chmod 755 run-docker.sh
+```
+
+### Start MLflow Server
+```
+./run-docker.sh mlflow-build
+./run-docker.sh mlflow-up
+```
+By default, the mlflow will be listening at: http://0.0.0.0:5000. You should be able to see the UI from there. 
+
+
 ## Overview
 
 This is your new Kedro project, which was generated using `Kedro 0.18.5`.
